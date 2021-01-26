@@ -19,7 +19,7 @@ async function restore(fileName: string): Promise<void> {
     const hbs = fs.readFileSync(fileName).toString();
     try {
         await axios({
-            method: "PUT",
+            method: "POST",
             url: `${urlPrefix()}/backup` ,
             headers: {Authorization: `Bearer ${token()}`},
             data: {hbs}
