@@ -20,7 +20,7 @@ async function restore(fileName: string): Promise<void> {
     try {
         await axios({
             method: "PUT",
-            url: `${urlPrefix()}/restore` ,
+            url: `${urlPrefix()}/backup` ,
             headers: {Authorization: `Bearer ${token()}`},
             data: {hbs}
         });
