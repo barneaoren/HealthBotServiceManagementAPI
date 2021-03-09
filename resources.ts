@@ -50,7 +50,7 @@ async function remove(): Promise<void> {
 }
 
 (async () => {
-    await read();
     await upload();
+    await read();
     await remove();
 })();
